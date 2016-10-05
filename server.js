@@ -3,6 +3,54 @@ var morgan = require('morgan');
 var path = require('path');
 
 var app = express();
+var articleOne={
+    title:" Article One | Ashik Ameer",
+    heading:"Article One",
+    date:"Oct 3rd,2016",
+    content:`<p>
+                 This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.
+             </p>
+             <p>
+                 This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.
+             </p>
+             <p>
+                 This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.This is the content.
+             </p>`
+    };
+function createTemplate(data){
+    var title=data.title;
+    var heading=data.heading;
+    var date=data.data;
+    var content=data.content;
+    var htmlTemplate=`
+    <html>
+    <head>
+        <title>
+            ${title}
+        </title>
+        <meta name="vireport" content="width-device-width,initial-scale=1"/>
+        <link href="/ui/style.css" rel="stylesheet" />
+    </head>
+    <body>
+     <div class="container">
+        <div>
+             <a href="/">Home</a>
+         </div>
+         <hr/>
+         <h3>
+             ${heading}
+         </h3>
+         <div>
+             ${date}
+         </div>
+         <div>
+             ${content}
+         </div>
+     </div> 
+    </body>
+</html>
+`
+}
 app.use(morgan('combined'));
 
 app.get('/', function (req, res) {
