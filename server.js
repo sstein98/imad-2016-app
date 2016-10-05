@@ -50,6 +50,7 @@ function createTemplate(data){
     </body>
 </html>
 `
+return htmlTemplate;
 }
 app.use(morgan('combined'));
 
