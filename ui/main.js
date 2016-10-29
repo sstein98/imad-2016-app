@@ -1,4 +1,3 @@
-console.log('Loaded!');
 var img=document.getElementById("madi");
 marginLeft=0;
 function moveRight(){
