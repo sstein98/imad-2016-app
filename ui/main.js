@@ -7,3 +7,7 @@ function moveRight(){
 img.onclick=function(){
     var interval=setInterval(moveRight,50);
 };
+button=document.getElementById("but");
+but.onclick=function(){
+    console.log("Dude!");
+};
