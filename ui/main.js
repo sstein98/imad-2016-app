@@ -1,4 +1,5 @@
 var img=document.getElementById("madi");
+var count=0;
 marginLeft=0;
 function moveRight(){
     marginLeft=marginLeft+10;
@@ -7,7 +8,9 @@ function moveRight(){
 img.onclick=function(){
     var interval=setInterval(moveRight,50);
 };
-button=document.getElementById("button");
+button=document.getElementById("counter");
 button.onclick=function(){
-    console.log("Dude!");
+    count=count+1;
+    span=document.getElementById("count");
+    span.innerHTML=counter.toString();
 };
