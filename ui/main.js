@@ -8,6 +8,6 @@ img.onclick=function(){
     var interval=setInterval(moveRight,50);
 };
 button=document.getElementById("button");
-but.onclick=function(){
+button.onclick=function(){
     console.log("Dude!");
 };
