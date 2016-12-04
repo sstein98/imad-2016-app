@@ -7,9 +7,9 @@ function moveRight(){
 img.onclick=function(){
     var interval=setInterval(moveRight,50);
 };
-button=document.getElementById("counter");
-button.onclick=function(){
-    var req=XMLHttpRequest();
+
+var req=XMLHttpRequest();
+req.onreadystatechange=function(){
     if (req.onreadystatechange===XMLHttpRequest.DONE){
         if(req.status===200){
             var counter=req.responseText; 
@@ -19,5 +19,5 @@ button.onclick=function(){
     }
     req.open('GET','http://ashikameer.imad.hasura-app.io/counter',true);
     req.send(null);
-    
 };
+    
