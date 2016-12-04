@@ -1,5 +1,4 @@
 var img=document.getElementById("madi");
-var count=0;
 marginLeft=0;
 function moveRight(){
     marginLeft=marginLeft+10;
@@ -10,7 +9,14 @@ img.onclick=function(){
 };
 button=document.getElementById("counter");
 button.onclick=function(){
-    count=count+1;
-    span=document.getElementById("count");
-    span.innerHTML=count.toString();
+    var req=XMLHttpRequest();
+    if (req.onreadystatechange===XMLHttpRequest.DONE){
+        if(req.status===200){
+            var counter=req.responseText; 
+            var span=document.getElementById("count");
+            span.innerHTML=counter.toString();
+        }
+    }
+    
+    
 };
