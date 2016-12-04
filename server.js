@@ -1,6 +1,7 @@
 var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
+var counter = 0 ;
 
 var app = express();
 function createTemplate(data){
@@ -53,6 +54,10 @@ app.get('/ui/main.js', function (req, res) {
 });
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
+});
+app.get('/counter', function (req, res) {
+  counter=counter+1;
+  res.send(counter.toString())
 });
 var articles={ 
     'article-one':{
