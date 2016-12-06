@@ -18,7 +18,7 @@ button.onclick=function(){
             }
         }
     };
-    req.open('GET','ashikameer.imad.hasura-app.io/counter',true);
+    req.open('GET','http://ashikameer.imad.hasura-app.io/counter',true);
     req.send(null);
 };
     
