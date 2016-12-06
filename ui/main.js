@@ -8,7 +8,6 @@ img.onclick=function(){
     var interval=setInterval(moveRight,50);
 };
 button.onclick=function(){
-
     var req=XMLHttpRequest();
     req.onreadystatechange=function(){
         if (req.onreadystatechange===XMLHttpRequest.DONE){
