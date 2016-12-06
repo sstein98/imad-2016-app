@@ -8,17 +8,17 @@ img.onclick=function(){
     var interval=setInterval(moveRight,50);
 };
 button.onclick=function(){
-    var req=XMLHttpRequest();
-    req.onreadystatechange=function(){
-        if (req.onreadystatechange===XMLHttpRequest.DONE){
-            if(req.status===200){
-                var counter=req.responseText; 
+    var request=XMLHttpRequest();
+    request.onreadystatechange=function(){
+        if (request.onreadystatechange===XMLHttpRequest.DONE){
+            if(request.status===200){
+                var counter=request.responseText; 
                 var span=document.getElementById("count");
                 span.innerHTML=counter.toString();
             }
         }
     };
-    req.open('GET','http://ashikameer.imad.hasura-app.io/counter',true);
-    req.send(null);
+    request.open('GET','http://ashikameer.imad.hasura-app.io/counter',true);
+    request.send(null);
 };
     
