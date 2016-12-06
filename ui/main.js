@@ -10,17 +10,17 @@ img.onclick=function(){
 };
 var button= document.getElementById("counter")
 button.onclick=function(){
-    var request=XMLHttpRequest();
-    request.onreadystatechange=function(){
-        if (request.onreadystatechange===XMLHttpRequest.DONE){
-            if(request.status===200){
-                var counter=request.responseText; 
+    var req=XMLHttpRequest();
+    req.onreadystatechange=function(){
+        if (req.onreadystatechange===XMLHttpRequest.DONE){
+            if(req.status===200){
+                var counter=req.responseText; 
                 var span=document.getElementById("count");
                 span.innerHTML=counter.toString();
             }
         }
     };
-    request.open('GET','http://ashikameer.imad.hasura-app.io/counter',true);
-    request.send(null);
+    req.open('GET','http://ashikameer.imad.hasura-app.io/counter',true);
+    req.send(null);
 };
     
