@@ -41,7 +41,7 @@ return htmlTemplate;
 }
 app.use(morgan('combined'));
 
-app.get('/', function (req, res) {
+app.get('/', function (req, res){
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
